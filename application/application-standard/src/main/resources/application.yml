@@ -50,6 +50,8 @@ camel:
           title: "Trigger"
         - name: "eventListener"
           title: "Event Listener"
+        - name: "simpleMqtt"
+          title: "MQTT"
       control:
         - name: "choice"
           title: "IF/ELSE"
@@ -95,6 +97,12 @@ oauth2:
     - "/user/register"
     - "/user/status"
     - "/public/**"
+
+moquette:
+  port: 1883
+  host: 0.0.0.0
+  allow_anonymous: true
+  persistence_enabled: false
 
 logging:
   level:
