@@ -15,7 +15,7 @@ spring:
     #    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://192.168.45.115:5432/postgres}"
     #    username: "${SPRING_DATASOURCE_USERNAME:postgres}"
     #    password: "${SPRING_DATASOURCE_PASSWORD:postgres}"
-    #    driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.postgresql.Driver}"
+    #    driverClassName: "${SPRING_DATASOURCE_DRIVER_CLASS_NAME:org.postgresql.Driver}"
     url: "${SPRING_DATASOURCE_URL:jdbc:h2:file:~/beaver-iot/h2/beaver;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1}"
     username: "${SPRING_DATASOURCE_USERNAME:sa}"
     password: "${SPRING_DATASOURCE_PASSWORD:}"
@@ -81,6 +81,10 @@ spring:
         core-size: 8
         max-size: 16
         queue-capacity: 10000
+
+  messages:
+    basename: messages/messages
+    encoding: UTF-8
 
 management:
   endpoints:
